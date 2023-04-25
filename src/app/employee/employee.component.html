@@ -1,0 +1,62 @@
+<nav>
+  <h1>Employee List</h1>
+  <div>
+    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="add" (click)="clickAddBtn()">Add Employee</button>
+    <button routerLink="/login" class="logout">Logout</button>
+  </div>
+</nav>
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile Number</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of employee">
+        <td>{{x.id}}</td>
+        <td>{{x.firstName}}</td>
+        <td>{{x.lastName}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.mobile}}</td>
+        <td>{{x.salary | currency}}</td>
+        <td>
+          <button id="edit"(click)="clickEditBtn(x)" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+          <button id="delete" (click)="clickDeletelBtn(x.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Employee</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <input type="text" placeholder="First Name" formControlName="firstName">
+          <input type="text" placeholder="Last Name" formControlName="lastName">
+          <input type="text" placeholder="Email" formControlName="email">
+          <input type="text" placeholder="Mobile Number" formControlName="mobile">
+          <input type="text" placeholder="Salary" formControlName="salary">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Close</button>
+        <button type="submit" class="btn btn-primary" *ngIf="showAdd" (click)="addEmployee()">Add</button>
+        <button type="submit" class="btn btn-primary" *ngIf="showEdit" (click)="editEmployee()">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

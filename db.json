@@ -1,0 +1,53 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Mario",
+      "lastName": "Rossi",
+      "email": "mario.rossi@gmail.com",
+      "mobile": "7239057323",
+      "salary": "50000"
+    },
+    {
+      "id": 2,
+      "firstName": "Anna",
+      "lastName": "Verdi",
+      "email": "anna.verdi@gmail.com",
+      "mobile": "422905727",
+      "salary": "30000"
+    },
+    {
+      "id": 3,
+      "firstName": "Luca",
+      "lastName": "Gialli",
+      "email": "luca.gialli@gmail.com",
+      "mobile": "4279872474",
+      "salary": "60000"
+    },
+    {
+      "id": 4,
+      "firstName": "Alex",
+      "lastName": "Azzurri",
+      "email": "alex.azzurri@gmail.com",
+      "mobile": "570975293",
+      "salary": "40000"
+    },
+    {
+      "id": 5,
+      "firstName": "Alice",
+      "lastName": "Marroni",
+      "email": "alice.marroni@gmail.com",
+      "mobile": "23592875927",
+      "salary": "50000"
+    }
+  ],
+  "users": [
+    {
+      "fullName": "Admin",
+      "mobile": "000",
+      "email": "admin@gmail.com",
+      "password": "myAdmin",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+
+  .card {
+    border: none;
+    width: 560px;
+    height: 460px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      color: white;
+      border-bottom: 1px solid white;
+    }
+
+    label {
+      color: white;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+
+      button {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: aquamarine;
+        }
+      }
+    }
+
+    a {
+      color: white;
+      transition: 0.5s;
+
+      &:hover {
+        color: aquamarine;
+      }
+    }
+  }
+}

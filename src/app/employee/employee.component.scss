@@ -1,0 +1,141 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 15vh;
+
+  h1 {
+    color: white;
+    margin-left: 30px;
+    font-size: 40px;
+  }
+
+  .add {
+    background-color: white;
+    color: #494949;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      color: black;
+      background-color: aquamarine;
+    }
+  }
+
+  .logout {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin-right: 10px;
+    width: 55px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: rgb(161, 4, 4);
+    }
+  }
+}
+
+section {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+
+  table {
+    border-collapse: collapse;
+
+    thead {
+      border-bottom: 5px solid black;
+
+      tr {
+        height: 10vh;
+
+        th {
+          text-align: center;
+          width: 12vw;
+          font-size: 20px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        height: 10vh;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: aquamarine;
+        }
+
+        td {
+          border-bottom: 1px solid black;
+          padding: 10px;
+          text-align: center;
+          font-size: 15px;
+
+          button {
+            width: 45%;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            margin: 2px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+          }
+
+          button#edit {
+            background-color: blue;
+            transition: 0.5s;
+
+            &:hover {
+              color: blue;
+              background-color: grey;
+            }
+          }
+
+          button#delete {
+            background-color: red;
+            transition: 0.5s;
+
+            &:hover {
+              color: red;
+              background-color: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  input {
+    margin: 5px;
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+}
